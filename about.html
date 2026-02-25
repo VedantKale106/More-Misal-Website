@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | More Veg Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['"Playfair Display"', 'serif'], } } } }
+    </script>
+</head>
+<body class="bg-stone-50 text-gray-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="font-serif text-2xl font-bold text-gray-900 tracking-tight">More<span class="text-orange-600">Veg</span></span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium transition hover:text-orange-600">Home</a>
+                    <a href="menu.html" class="text-gray-600 font-medium transition hover:text-orange-600">Menu</a>
+                    <a href="gallery.html" class="text-gray-600 font-medium transition hover:text-orange-600">Gallery</a>
+                    <a href="about.html" class="text-orange-600 font-medium transition hover:text-orange-500">About</a>
+                    <a href="reviews.html" class="text-gray-600 font-medium transition hover:text-orange-600">Reviews</a>
+                    <a href="contact.html" class="text-gray-600 font-medium transition hover:text-orange-600">Contact</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-lg font-medium text-gray-600">Home</a>
+            <a href="menu.html" class="block text-lg font-medium text-gray-600">Menu</a>
+            <a href="gallery.html" class="block text-lg font-medium text-gray-600">Gallery</a>
+            <a href="about.html" class="block text-lg font-medium text-orange-600">About</a>
+            <a href="reviews.html" class="block text-lg font-medium text-gray-600">Reviews</a>
+            <a href="contact.html" class="block text-lg font-medium text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20 px-4 max-w-5xl mx-auto min-h-[80vh]">
+        
+        <div class="bg-white rounded-3xl p-6 md:p-16 shadow-sm border border-gray-100">
+            <div class="text-center md:text-left mb-12">
+                <span class="uppercase tracking-widest text-orange-500 font-semibold text-xs md:text-sm">Our Heritage</span>
+                <h1 class="font-serif text-3xl md:text-5xl text-gray-900 font-bold mt-4 mb-6">A Taste of Junnar Tradition</h1>
+                <div class="h-1 w-16 bg-orange-500 mx-auto md:mx-0 rounded-full"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
+                <div class="w-full md:w-1/2 space-y-6 text-gray-600 text-base md:text-lg leading-relaxed font-light">
+                    <p>
+                        Located conveniently at CS Mall in Bodake Nagar, Junnar, <strong class="font-semibold text-gray-900">More Veg Restaurant & Misal House</strong> was established with one simple, unwavering goal: to serve the most authentic, hygienic, and delicious pure vegetarian food to our local community and travelers alike.
+                    </p>
+                    <p>
+                        Junnar is a city steeped in profound historical significance, nestled at the base of the great Shivneri Fort—the esteemed birthplace of Chhatrapati Shivaji Maharaj. We take immense pride in being part of this vibrant cultural tapestry.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Authentic Dining" class="rounded-2xl shadow-lg w-full h-64 md:h-80 object-cover">
+                </div>
+            </div>
+
+            <div class="bg-stone-50 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center border border-stone-100">
+                <div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80" alt="Ajit More - Founder" class="w-full h-full object-cover rounded-full border-4 border-white shadow-md">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="font-serif text-2xl md:text-3xl text-gray-900 font-bold mb-4">Meet Our Founder</h2>
+                    <p class="text-orange-600 font-semibold mb-4">Ajit More</p>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        "Food is more than just sustenance; it's a way to honor our roots. When I started More Veg, I wanted to create a place where every person, whether a local or a traveler visiting Shivneri, felt the same warmth and quality they would find in a Maharashtrian home."
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-12 border-t border-gray-100">
+                <h2 class="font-serif text-2xl md:text-3xl text-gray-900 font-bold mb-10 text-center">Our Philosophy</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="flex gap-4">
+                        <div class="text-orange-500 text-2xl">✓</div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-xl mb-2">100% Pure Vegetarian</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Operating a strictly vegetarian kitchen to honor dietary traditions and religious practices.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-orange-500 text-2xl">✓</div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-xl mb-2">Uncompromising Hygiene</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We maintain a spotless kitchen and dining area for a safe, premium family experience.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-orange-500 text-2xl">✓</div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-xl mb-2">The Perfect Misal</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Our proprietary spice blend makes our Misal Pav a culinary landmark in Junnar.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-orange-500 text-2xl">✓</div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-xl mb-2">Family Hospitality</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Warm, welcoming staff dedicated to making every meal memorable for your family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs md:text-sm">&copy; 2026 More Veg Restaurant & Misal House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

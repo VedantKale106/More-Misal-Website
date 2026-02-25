@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | More Veg Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['"Playfair Display"', 'serif'], } } } }
+    </script>
+</head>
+<body class="bg-stone-50 text-gray-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="font-serif text-2xl font-bold text-gray-900 tracking-tight">More<span class="text-orange-600">Veg</span></span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium transition hover:text-orange-600">Home</a>
+                    <a href="menu.html" class="text-gray-600 font-medium transition hover:text-orange-600">Menu</a>
+                    <a href="gallery.html" class="text-gray-600 font-medium transition hover:text-orange-600">Gallery</a>
+                    <a href="about.html" class="text-gray-600 font-medium transition hover:text-orange-600">About</a>
+                    <a href="reviews.html" class="text-orange-600 font-medium transition hover:text-orange-500">Reviews</a>
+                    <a href="contact.html" class="text-gray-600 font-medium transition hover:text-orange-600">Contact</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-lg font-medium text-gray-600">Home</a>
+            <a href="menu.html" class="block text-lg font-medium text-gray-600">Menu</a>
+            <a href="gallery.html" class="block text-lg font-medium text-gray-600">Gallery</a>
+            <a href="about.html" class="block text-lg font-medium text-gray-600">About</a>
+            <a href="reviews.html" class="block text-lg font-medium text-orange-600">Reviews</a>
+            <a href="contact.html" class="block text-lg font-medium text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20 px-6 max-w-7xl mx-auto min-h-[80vh]">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="uppercase tracking-widest text-orange-500 font-semibold text-xs md:text-sm">Testimonials</span>
+            <h1 class="font-serif text-4xl md:text-5xl text-gray-900 font-bold mt-4 mb-6">Guest Experiences</h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+                <span class="text-amber-500 text-2xl">★★★★★</span>
+                <p class="text-gray-500">Rated <strong class="text-gray-900">4.4 / 5</strong> based on 337+ Google Reviews</p>
+            </div>
+            <div class="h-1 w-16 bg-orange-500 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "We visited with a group of 28 people. The restaurant is located about 3 km from Shivneri Fort. The food was very tasty, with good quantity and reasonable prices."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">S</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Sunil Shinde</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "Honestly… this is the best misal I’ve ever had! The spice level was perfect enough to give that signature kick but not overpowering. The farsan was fresh and crunchy!"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">A</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Amit Zendekar</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "Our all-time favorite stop on the way to our native place. Their Misal is simply outstanding – spicy, flavorful, and served fresh every time."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">K</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Kishor Pansare</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "Had an amazing dinner! The owner was extremely welcoming, and the staff were warm and attentive. The food was absolutely top-notch. Highly recommended! ✨"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">B</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Bhujang Sarkar</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "Really 5 starred restaurant in the heart of Junnar city near the main chowk, i.e., near the statue of Chhatrapati Shivaji Maharaj."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">D</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Dattatray Khillari</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <span class="text-[10px] bg-stone-100 text-stone-500 px-2 py-1 rounded uppercase font-bold">Local Guide</span>
+                    </div>
+                    <p class="font-serif text-base md:text-lg text-gray-700 italic leading-relaxed mb-6">
+                        "A decent restaurant on the way to Naneghat, Shivneri, and Malshej for breakfast. Misal pav, bhaji, and South Indian are decent. Good place to take a stop."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">A</div>
+                    <div>
+                        <div class="font-semibold text-gray-900 text-sm">Adesh Tajane</div>
+                        <div class="text-gray-400 text-xs">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs md:text-sm">&copy; 2026 More Veg Restaurant & Misal House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
