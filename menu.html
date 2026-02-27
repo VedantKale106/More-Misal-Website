@@ -7,29 +7,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['"Playfair Display"', 'serif'], } } } }
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        serif: ['"Playfair Display"', 'serif'], 
+                    },
+                    colors: {
+                        'brand-dark': '#2A201A',
+                        'brand-accent': '#E05D26',
+                        'brand-bg': '#FAF8F5'
+                    }
+                } 
+            } 
+        }
     </script>
+    <style>
+        /* Hide scrollbar for category pills but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Classic menu dotted line */
+        .menu-dots {
+            flex-grow: 1;
+            border-bottom: 2px dotted #d6d3d1;
+            margin: 0 12px;
+            position: relative;
+            top: -6px;
+            opacity: 0.6;
+        }
+    </style>
 </head>
-<body class="bg-stone-50 text-gray-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+<body class="bg-brand-bg text-gray-800 antialiased selection:bg-brand-accent selection:text-white">
 
-    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-orange-100/50 to-transparent pointer-events-none z-0"></div>
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-orange-900/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="index.html" class="flex items-center gap-2">
-                    <span class="font-serif text-2xl font-bold text-gray-900 tracking-tight">More<span class="text-orange-600">Veg</span></span>
+                    <span class="font-serif text-2xl font-bold text-brand-dark tracking-tight">More<span class="text-brand-accent">Veg</span></span>
                 </a>
                 
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 font-medium transition hover:text-orange-600">Home</a>
-                    <a href="menu.html" class="text-orange-600 font-medium transition hover:text-orange-500">Menu</a>
-                    <a href="gallery.html" class="text-gray-600 font-medium transition hover:text-orange-600">Gallery</a>
-                    <a href="about.html" class="text-gray-600 font-medium transition hover:text-orange-600">About</a>
-                    <a href="reviews.html" class="text-gray-600 font-medium transition hover:text-orange-600">Reviews</a>
-                    <a href="contact.html" class="text-gray-600 font-medium transition hover:text-orange-600">Contact</a>
+                    <a href="index.html" class="text-gray-500 font-medium transition hover:text-brand-accent">Home</a>
+                    <a href="menu.html" class="text-brand-accent font-medium transition hover:text-orange-500">Menu</a>
+                    <a href="gallery.html" class="text-gray-500 font-medium transition hover:text-brand-accent">Gallery</a>
+                    <a href="about.html" class="text-gray-500 font-medium transition hover:text-brand-accent">About</a>
+                    <a href="reviews.html" class="text-gray-500 font-medium transition hover:text-brand-accent">Reviews</a>
+                    <a href="contact.html" class="text-gray-500 font-medium transition hover:text-brand-accent">Contact</a>
                 </nav>
 
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-600 focus:outline-none p-2">
+                    <button id="menu-btn" class="text-brand-dark focus:outline-none p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
@@ -38,9 +73,9 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl absolute w-full">
             <a href="index.html" class="block text-lg font-medium text-gray-600">Home</a>
-            <a href="menu.html" class="block text-lg font-medium text-orange-600">Menu</a>
+            <a href="menu.html" class="block text-lg font-medium text-brand-accent">Menu</a>
             <a href="gallery.html" class="block text-lg font-medium text-gray-600">Gallery</a>
             <a href="about.html" class="block text-lg font-medium text-gray-600">About</a>
             <a href="reviews.html" class="block text-lg font-medium text-gray-600">Reviews</a>
@@ -48,106 +83,205 @@
         </div>
     </header>
 
-    <main class="py-12 md:py-20 px-6 max-w-5xl mx-auto min-h-[80vh]">
-        <div class="text-center mb-12 md:mb-16">
-            <span class="uppercase tracking-widest text-orange-500 font-semibold text-xs md:text-sm">Discover Our Flavors</span>
-            <h1 class="font-serif text-4xl md:text-5xl text-gray-900 font-bold mt-4 mb-6">The Menu</h1>
-            <p class="text-gray-500 text-sm md:text-base">100% Pure Vegetarian • Freshly Prepared • Authentic Recipes</p>
-            <div class="h-1 w-16 bg-orange-500 mx-auto mt-6 rounded-full"></div>
+    <main class="relative z-10 py-10 md:py-16 px-4 sm:px-6 max-w-4xl mx-auto min-h-[80vh]">
+        
+        <div class="text-center mb-10">
+            <span class="uppercase tracking-[0.2em] text-brand-accent font-bold text-xs md:text-sm">A Symphony of Spices</span>
+            <h1 class="font-serif text-5xl md:text-6xl text-brand-dark font-bold mt-4 mb-4">Our Menu</h1>
+            <p class="text-stone-500 text-sm md:text-base font-medium">100% Pure Vegetarian • Authentic Recipes</p>
         </div>
 
-        <div class="mb-12 md:mb-16">
-            <h2 class="font-serif text-2xl md:text-3xl text-gray-900 border-b border-gray-200 pb-4 mb-8">House Specials: Misal & Snacks</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Special Misal Pav</h3>
-                        <span class="text-orange-600 font-bold">₹80</span>
+        <div class="sticky top-20 z-40 bg-brand-bg/95 backdrop-blur-md pt-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:bg-transparent sm:backdrop-blur-none">
+            <div class="max-w-2xl mx-auto mb-4">
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-stone-400 group-focus-within:text-brand-accent transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
                     </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Spicy moth bean curry, crunchy farsan, chopped onions, and lemon, served with 2 soft pavs.</p>
+                    <input type="text" id="search-input" class="block w-full pl-12 pr-4 py-3.5 border-2 border-transparent bg-white shadow-sm rounded-2xl leading-5 text-stone-700 placeholder-stone-400 focus:outline-none focus:border-brand-accent focus:ring-0 sm:text-base transition-all duration-300" placeholder="Craving Misal, Dosa, or Paneer?">
                 </div>
-
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Vada Pav (2 pcs)</h3>
-                        <span class="text-orange-600 font-bold">₹40</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Classic Mumbai style potato fritters in soft bread served with dry garlic chutney.</p>
-                </div>
-
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Kanda Poha</h3>
-                        <span class="text-orange-600 font-bold">₹50</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Light flattened rice cooked with onions, crunchy peanuts, and a hint of turmeric.</p>
-                </div>
-
             </div>
+
+            <div id="category-filters" class="flex overflow-x-auto gap-2 py-2 no-scrollbar max-w-3xl mx-auto snap-x">
+                </div>
         </div>
 
-        <div class="mb-12 md:mb-16">
-            <h2 class="font-serif text-2xl md:text-3xl text-gray-900 border-b border-gray-200 pb-4 mb-8">South Indian Breakfast</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Masala Dosa</h3>
-                        <span class="text-orange-600 font-bold">₹70</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Golden crispy crepe stuffed with spiced potatoes, served with hot sambar and fresh chutney.</p>
-                </div>
-
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Idli Sambar (3 pcs)</h3>
-                        <span class="text-orange-600 font-bold">₹50</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Soft and fluffy steamed rice and lentil cakes immersed in flavorful sambar.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="mb-12">
-            <h2 class="font-serif text-2xl md:text-3xl text-gray-900 border-b border-gray-200 pb-4 mb-8">North Indian & Thalis</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Special Veg Thali</h3>
-                        <span class="text-orange-600 font-bold">₹150</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">A hearty meal of 2 Sabzis, Dal, Rice, 3 Chapatis, Papad, Pickle, and a Sweet dish.</p>
-                </div>
-
-                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-semibold text-base md:text-lg text-gray-900">Paneer Butter Masala</h3>
-                        <span class="text-orange-600 font-bold">₹180</span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed">Cottage cheese cubes simmered in a rich, creamy, and mildly sweet tomato gravy.</p>
-                </div>
-
+        <div id="menu-container" class="mt-8 md:mt-12">
+            <div class="text-center text-stone-500 py-10 animate-pulse font-medium">
+                Opening the menu...
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 py-12">
+    <footer class="bg-brand-dark text-stone-400 py-12 mt-12 border-t border-stone-800">
         <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-2xl text-white mb-4">More Veg Restaurant</h2>
             <p class="text-xs md:text-sm">&copy; 2026 More Veg Restaurant & Misal House. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Menu Toggle Script
+        // Mobile Menu Toggle
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        // State Variables
+        let restaurantData = null;
+        let currentCategory = 'All';
+        let currentSearch = '';
+
+        // Fetch Menu Data
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('menu.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    restaurantData = data;
+                    renderCategoryPills(data.menu);
+                    filterAndRender(); 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('menu-container').innerHTML = `
+                        <div class="text-center py-10 text-red-800 bg-red-50 rounded-2xl border border-red-200">
+                            <p class="font-semibold text-lg">Oops! We couldn't load the menu.</p>
+                            <p class="text-sm mt-2 text-red-600">Please view this via a local web server to fetch the JSON file.</p>
+                        </div>
+                    `;
+                });
         });
+
+        // Search Input Listener
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase().trim();
+            filterAndRender();
+        });
+
+        // Generate Category Filter Buttons
+        function renderCategoryPills(menuItems) {
+            const filterContainer = document.getElementById('category-filters');
+            let html = `<button onclick="setCategory('All')" class="category-btn active snap-start shrink-0 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-brand-accent text-white shadow-md">All Menu</button>`;
+            
+            menuItems.forEach(cat => {
+                html += `<button onclick="setCategory('${cat.category}')" class="category-btn snap-start shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-white text-stone-600 border border-stone-200 hover:border-brand-accent hover:text-brand-accent">${cat.category}</button>`;
+            });
+            
+            filterContainer.innerHTML = html;
+        }
+
+        // Handle Category Click
+        window.setCategory = function(category) {
+            currentCategory = category;
+            
+            // Update Active Class
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                if (btn.innerText === category || (category === 'All' && btn.innerText === 'All Menu')) {
+                    btn.className = "category-btn active snap-start shrink-0 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-brand-accent text-white shadow-md";
+                } else {
+                    btn.className = "category-btn snap-start shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-white text-stone-600 border border-stone-200 hover:border-brand-accent hover:text-brand-accent";
+                }
+            });
+
+            filterAndRender();
+        }
+
+        // Filter Logic
+        function filterAndRender() {
+            if (!restaurantData) return;
+
+            let filteredMenu = [];
+
+            restaurantData.menu.forEach(cat => {
+                if (currentCategory === 'All' || cat.category === currentCategory) {
+                    const matchedItems = cat.items.filter(item => 
+                        item.name.toLowerCase().includes(currentSearch)
+                    );
+
+                    if (matchedItems.length > 0) {
+                        filteredMenu.push({
+                            category: cat.category,
+                            items: matchedItems
+                        });
+                    }
+                }
+            });
+
+            renderMenuHTML(filteredMenu);
+        }
+
+        // Render HTML
+        function renderMenuHTML(menuData) {
+            const menuContainer = document.getElementById('menu-container');
+            let htmlContent = '';
+
+            if (menuData.length === 0) {
+                menuContainer.innerHTML = `
+                    <div class="text-center py-20 px-6">
+                        <svg class="mx-auto h-16 w-16 text-stone-300 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <h3 class="font-serif text-2xl text-brand-dark">No dishes found</h3>
+                        <p class="mt-2 text-stone-500">We couldn't find anything matching your search. Try another craving!</p>
+                        <button onclick="document.getElementById('search-input').value=''; currentSearch=''; filterAndRender();" class="mt-6 text-brand-accent font-semibold hover:underline">Clear Search</button>
+                    </div>
+                `;
+                return;
+            }
+
+            menuData.forEach(cat => {
+                htmlContent += `
+                    <div class="mb-14 fade-in">
+                        <div class="flex items-center justify-center mb-8">
+                            <div class="h-[1px] bg-stone-200 flex-grow"></div>
+                            <h2 class="font-serif text-2xl md:text-3xl text-brand-dark px-6 text-center whitespace-nowrap">${cat.category}</h2>
+                            <div class="h-[1px] bg-stone-200 flex-grow"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+                `;
+
+                cat.items.forEach(item => {
+                    htmlContent += `
+                        <div class="group flex items-end justify-between transition-all duration-300 hover:translate-x-1 cursor-default">
+                            <h3 class="font-serif text-base md:text-lg text-brand-dark font-medium leading-tight group-hover:text-brand-accent transition-colors">${item.name}</h3>
+                            <div class="menu-dots group-hover:border-brand-accent transition-colors"></div>
+                            <span class="font-sans text-brand-accent font-bold text-base md:text-lg whitespace-nowrap">₹${item.price}</span>
+                        </div>
+                    `;
+                });
+
+                htmlContent += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            // "Please Note" Section at the bottom
+            if (currentSearch === '' && currentCategory === 'All' && restaurantData.restaurant.notes) {
+                htmlContent += `
+                    <div class="mt-20 p-8 md:p-10 bg-white rounded-3xl shadow-sm border border-stone-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent"></div>
+                        <h3 class="font-serif text-2xl text-brand-dark mb-4">Good to Know</h3>
+                        <ul class="space-y-3">
+                            ${restaurantData.restaurant.notes.map(note => `
+                                <li class="flex items-start text-stone-600 text-sm md:text-base">
+                                    <svg class="h-5 w-5 text-brand-accent mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    ${note}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            menuContainer.innerHTML = htmlContent;
+        }
     </script>
 </body>
 </html>
