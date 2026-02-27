@@ -7,7 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['"Playfair Display"', 'serif'], } } } }
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        serif: ['"Playfair Display"', 'serif'], 
+                    } 
+                } 
+            } 
+        }
     </script>
 </head>
 <body class="bg-stone-50 text-gray-800 antialiased selection:bg-orange-200 selection:text-orange-900">
@@ -50,54 +59,66 @@
 
     <main class="py-12 md:py-20 px-6 max-w-7xl mx-auto min-h-[80vh]">
         <div class="text-center mb-12 md:mb-16">
-            <span class="uppercase tracking-widest text-orange-500 font-semibold text-xs md:text-sm">Visual Journey</span>
-            <h1 class="font-serif text-4xl md:text-5xl text-gray-900 font-bold mt-4 mb-6">Gallery</h1>
-            <p class="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">A glimpse of our beautifully plated dishes and welcoming ambiance at the heart of Junnar.</p>
+            <span class="uppercase tracking-widest text-orange-500 font-semibold text-xs md:text-sm">Experience MoreVeg</span>
+            <h1 class="font-serif text-4xl md:text-5xl text-gray-900 font-bold mt-4 mb-6">Our Showcase</h1>
+            <p class="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">Explore the culinary artistry and inviting spaces that make every visit to Junnar's favorite vegetarian destination special.</p>
             <div class="h-1 w-16 bg-orange-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80" alt="Spicy Misal" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Signature Misal</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-orange-50 border border-orange-100 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-orange-200 font-serif text-6xl absolute top-6 right-8 select-none">01</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">Signature Misal</h3>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">Our legendary spicy sprout curry topped with crunchy farsan, served with buttery pav and a wedge of lemon.</p>
                 </div>
+                <div class="h-1 w-0 bg-orange-500 group-hover:w-full transition-all duration-500"></div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Thali" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Authentic Thali</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-stone-100 border border-stone-200 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-stone-200 font-serif text-6xl absolute top-6 right-8 select-none">02</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">Authentic Thali</h3>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">A wholesome celebration of Maharashtrian flavors featuring seasonal vegetables, dal, and handmade rotis.</p>
                 </div>
+                <div class="h-1 w-0 bg-stone-500 group-hover:w-full transition-all duration-500"></div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Dosa" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Crispy Dosa</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-amber-50 border border-amber-100 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-amber-200 font-serif text-6xl absolute top-6 right-8 select-none">03</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">Crispy Dosa</h3>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">Golden-brown South Indian perfection, served with our signature coconut chutney and aromatic sambar.</p>
                 </div>
+                <div class="h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Our Ambiance</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-orange-100 border border-orange-200 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-white font-serif text-6xl absolute top-6 right-8 select-none">04</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">The Ambiance</h3>
+                    <p class="text-gray-800/70 mt-2 text-sm leading-relaxed">A blend of modern comfort and traditional warmth, perfect for family gatherings and peaceful lunches.</p>
                 </div>
+                <div class="h-1 w-0 bg-orange-600 group-hover:w-full transition-all duration-500"></div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80" alt="Indian Sweets" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Fresh Sweets</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-rose-50 border border-rose-100 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-rose-200 font-serif text-6xl absolute top-6 right-8 select-none">05</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">Fresh Sweets</h3>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">End your meal on a sweet note with our daily prepared traditional desserts and milk-based treats.</p>
                 </div>
+                <div class="h-1 w-0 bg-rose-500 group-hover:w-full transition-all duration-500"></div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-3xl shadow-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Fresh Ingredients" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end md:items-center justify-center p-6 md:p-0">
-                    <span class="text-white font-serif text-lg md:text-xl tracking-wide">Pure Ingredients</span>
+            <div class="group relative overflow-hidden rounded-3xl bg-emerald-50 border border-emerald-100 p-8 h-80 flex flex-col justify-end transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="mb-4">
+                    <span class="text-emerald-200 font-serif text-6xl absolute top-6 right-8 select-none">06</span>
+                    <h3 class="font-serif text-2xl text-gray-900 font-bold">Pure Quality</h3>
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">We source the freshest local produce to ensure every bite is healthy, hygienic, and full of natural flavor.</p>
                 </div>
+                <div class="h-1 w-0 bg-emerald-500 group-hover:w-full transition-all duration-500"></div>
             </div>
 
         </div>
@@ -110,10 +131,8 @@
     </footer>
 
     <script>
-        // Menu Toggle Script
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
-
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
